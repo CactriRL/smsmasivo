@@ -1,1 +1,15 @@
 CTR-ASFI Te invitan a participar en la Encuesta Nacional de Servicios Financieros 2023 del 13/Nov al 12/Dic has clic en: https://encuesta2023.asfi.gob.bo. (Tu respuesta es confidencial)
+
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-main-nav > div > mw-fab-link > a").click()
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input > div > div > input").value="123456"
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > div > mw-contact-selector-button > button > span.mat-mdc-button-touch-target").click()
+
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input > div > div > input")
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input > div > div > input")
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input")
