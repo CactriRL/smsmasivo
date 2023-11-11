@@ -1,0 +1,221 @@
+//script
+// Primer clic en un enlace (por ejemplo, 5 segundos)
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-main-nav > div > mw-fab-link > a").click();
+
+// Primer intervalo antes del primer clic (por ejemplo, 10 segundos)
+setTimeout(function () {
+  // Selecciona el elemento input
+  var inputElement = document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input > div > div > input");
+
+  // Verifica si se encontró el elemento input
+  if (inputElement) {
+    // Establece un valor en el elemento input
+    inputElement.value = "TuNúmeroDeTeléfono";
+
+    // Crea un nuevo evento de entrada de teclado
+    var event = new Event('input', {
+      bubbles: true,
+      cancelable: true,
+    });
+
+    // Despacha el evento en el elemento input
+    inputElement.dispatchEvent(event);
+  } else {
+    console.error("No se encontró el elemento input con el selector proporcionado.");
+  }
+
+  // Segundo intervalo después de establecer el valor en el input (por ejemplo, 5 segundos)
+  setTimeout(function () {
+    // Segundo clic en otro enlace
+    document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > div > mw-contact-selector-button > button > span.mat-mdc-button-touch-target").click();
+
+    // Tercer intervalo después del segundo clic (por ejemplo, 5 segundos)
+    setTimeout(function () {
+      // Busca el elemento que contiene la clase dinámica en el nombre de la clase
+      var containerElement = document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-conversation-container > div > div[class*=ng-tns]");
+
+      // Verifica si se encontró el elemento contenedor
+      if (containerElement) {
+        // Concatena la clase dinámica con el resto del selector
+        var selector = "div.container." + containerElement.classList[1] + " > div > mws-message-compose > div > div.input-box > div > div > mws-autosize-textarea > textarea";
+
+        // Selecciona el elemento textarea utilizando el selector construido
+        var newTextareaElement = document.querySelector(selector);
+
+        // Verifica si se encontró el elemento textarea
+        if (newTextareaElement) {
+          // Inserta el texto en el nuevo cuadro de texto
+          newTextareaElement.value = "Nuevo mensaje de prueba";
+
+          // Crea un nuevo evento de entrada de teclado
+          var newEvent = new Event('input', {
+            bubbles: true,
+            cancelable: true,
+          });
+
+          // Despacha el evento en el nuevo elemento textarea
+          newTextareaElement.dispatchEvent(newEvent);
+
+          // Cuarto intervalo después de establecer el valor en el textarea (por ejemplo, 5 segundos)
+          setTimeout(function () {
+            // Simula la pulsación de la tecla "Enter" en el nuevo textarea
+            newTextareaElement.dispatchEvent(new KeyboardEvent('keydown', {
+              key: 'Enter',
+              bubbles: true,
+              cancelable: true,
+            }));
+          }, 5000); // 5000 milisegundos = 5 segundos después de establecer el valor en el textarea
+        } else {
+          console.error("No se encontró el nuevo elemento textarea con el selector construido.");
+        }
+      } else {
+        console.error("No se encontró el elemento contenedor con la clase dinámica.");
+      }
+    }, 5000); // 5000 milisegundos = 5 segundos después del segundo clic
+  }, 5000); // 5000 milisegundos = 5 segundos después de establecer el valor en el input
+}, 10000); // 10000 milisegundos = 10 segundos antes del primer clic
+
+
+
+
+
+
+
+
+//CON TIEMPO DE ESPERA ANTES DE INICIAR
+
+// Espera 5 segundos antes de comenzar
+setTimeout(function () {
+  // Primer clic en un enlace (por ejemplo, 5 segundos)
+  document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-main-nav > div > mw-fab-link > a").click();
+
+  // Primer intervalo antes del primer clic (por ejemplo, 10 segundos)
+  setTimeout(function () {
+    // Selecciona el elemento input
+    var inputElement = document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > mw-new-conversation-sub-header > div > div.input-container > mw-contact-chips-input > div > div > input");
+
+    // Verifica si se encontró el elemento input
+    if (inputElement) {
+      // Establece un valor en el elemento input
+      inputElement.value = "TuNúmeroDeTeléfono";
+
+      // Crea un nuevo evento de entrada de teclado
+      var event = new Event('input', {
+        bubbles: true,
+        cancelable: true,
+      });
+
+      // Despacha el evento en el elemento input
+      inputElement.dispatchEvent(event);
+    } else {
+      console.error("No se encontró el elemento input con el selector proporcionado.");
+    }
+
+    // Segundo intervalo después de establecer el valor en el input (por ejemplo, 5 segundos)
+    setTimeout(function () {
+      // Segundo clic en otro enlace
+      document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-new-conversation-container > div > mw-contact-selector-button > button > span.mat-mdc-button-touch-target").click();
+
+      // Tercer intervalo después del segundo clic (por ejemplo, 5 segundos)
+      setTimeout(function () {
+        // Busca el elemento que contiene la clase dinámica en el nombre de la clase
+        var containerElement = document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-conversation-container > div > div[class*=ng-tns]");
+
+        // Verifica si se encontró el elemento contenedor
+        if (containerElement) {
+          // Concatena la clase dinámica con el resto del selector
+          var selector = "div.container." + containerElement.classList[1] + " > div > mws-message-compose > div > div.input-box > div > div > mws-autosize-textarea > textarea";
+
+          // Selecciona el elemento textarea utilizando el selector construido
+          var newTextareaElement = document.querySelector(selector);
+
+          // Verifica si se encontró el elemento textarea
+          if (newTextareaElement) {
+            // Inserta el texto en el nuevo cuadro de texto
+            newTextareaElement.value = "Nuevo mensaje de prueba";
+
+            // Crea un nuevo evento de entrada de teclado
+            var newEvent = new Event('input', {
+              bubbles: true,
+              cancelable: true,
+            });
+
+            // Despacha el evento en el nuevo elemento textarea
+            newTextareaElement.dispatchEvent(newEvent);
+
+            // Cuarto intervalo después de establecer el valor en el textarea (por ejemplo, 5 segundos)
+            setTimeout(function () {
+              // Simula la pulsación de la tecla "Enter" en el nuevo textarea
+              newTextareaElement.dispatchEvent(new KeyboardEvent('keydown', {
+                key: 'Enter',
+                bubbles: true,
+                cancelable: true,
+              }));
+            }, 5000); // 5000 milisegundos = 5 segundos después de establecer el valor en el textarea
+          } else {
+            console.error("No se encontró el nuevo elemento textarea con el selector construido.");
+          }
+        } else {
+          console.error("No se encontró el elemento contenedor con la clase dinámica.");
+        }
+      }, 5000); // 5000 milisegundos = 5 segundos después del segundo clic
+    }, 5000); // 5000 milisegundos = 5 segundos después de establecer el valor en el input
+  }, 10000); // 10000 milisegundos = 10 segundos antes del primer clic
+}, 5000); // Espera 5 segundos antes de comenzar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+boton
+
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-conversation-container > div > div.container.ng-tns-c890155276-66.ng-star-inserted > div > mws-message-compose > div > mws-message-send-button > div > mw-message-send-button > button > span.mat-mdc-focus-indicator").click();
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-conversation-container > div > div.container.ng-tns-c890155276-66.ng-star-inserted > div > mws-message-compose > div > mws-message-send-button > div > mw-message-send-button > button > span.mat-mdc-button-touch-target").click();
+document.querySelector("body > mw-app > mw-bootstrap > div > main > mw-main-container > div > mw-conversation-container > div > div.container.ng-tns-c890155276-66.ng-star-inserted > div > mws-message-compose > div > mws-message-send-button > div > mw-message-send-button > button > span.mat-ripple.mat-mdc-button-ripple").click();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
